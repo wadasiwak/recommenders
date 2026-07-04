@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>推薦系統</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'PingFang TC', 'Noto Sans TC', 'Microsoft JhengHei', system-ui, sans-serif;
+  background: radial-gradient(1200px 600px at 80% -10%, #1a1440 0%, #0d1017 55%);
+  color: #e6e9f0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.wrap { max-width: 720px; width: 100%; text-align: center; }
+h1 { font-size: 28px; margin-bottom: 8px; }
+h1 span {
+  background: linear-gradient(90deg, #7c5cff, #4ecdc4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.sub { color: #8b93a7; margin-bottom: 36px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+a.card {
+  display: block;
+  background: #161b26;
+  border: 1px solid #262d3d;
+  border-radius: 16px;
+  padding: 32px 20px;
+  text-decoration: none;
+  color: #e6e9f0;
+  transition: all 0.15s;
+}
+a.card:hover { transform: translateY(-4px); border-color: #7c5cff; }
+.emoji { font-size: 40px; margin-bottom: 12px; }
+.name { font-size: 18px; font-weight: 700; }
+.desc { color: #8b93a7; font-size: 13px; margin-top: 6px; }
+.foot { margin-top: 40px; color: #8b93a7; font-size: 12px; opacity: 0.7; line-height: 1.8; }
+.foot a { color: #8b93a7; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1><span>評分 × 推薦</span></h1>
+  <div class="sub">評分你看過的作品，系統依你的口味推薦下一部。評分只存在你自己的瀏覽器裡。</div>
+  <div class="cards">
+    <a class="card" href="anime/"><div class="emoji">📺</div><div class="name">動畫</div><div class="desc">AniList 人氣前 2000 部</div></a>
+    <a class="card" href="movie/"><div class="emoji">🎞️</div><div class="name">電影</div><div class="desc">TMDB 前 2000 部</div></a>
+    <a class="card" href="tv/"><div class="emoji">📡</div><div class="name">影集</div><div class="desc">TMDB 前 2000 部</div></a>
+  </div>
+  <div class="foot">
+    資料來源：<a href="https://anilist.co" target="_blank" rel="noreferrer">AniList</a> ·
+    <a href="https://bgm.tv" target="_blank" rel="noreferrer">Bangumi</a> ·
+    <a href="https://www.themoviedb.org" target="_blank" rel="noreferrer">TMDB</a><br/>
+    This product uses the TMDB API but is not endorsed or certified by TMDB.
+  </div>
+</div>
+</body>
+</html>
