@@ -1,6 +1,6 @@
 {
-  "name": "藝術推薦系統",
-  "short_name": "藝術評分",
+  "name": "藝術巡禮",
+  "short_name": "藝術巡禮",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#0d1017",
